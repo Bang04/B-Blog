@@ -1,0 +1,8 @@
+.PostCard{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    background-color: black;
+    border: 1px solid #fff;
+    color: beige;
+}
