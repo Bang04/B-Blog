@@ -1,6 +1,7 @@
 
 .PostCardList{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 0 auto;
+    background-color: black;
 }
