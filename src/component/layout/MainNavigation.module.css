@@ -1,0 +1,14 @@
+.logo{
+  display: flex;
+  vertical-align: middle;
+}
+.logotxt{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  
+}
+
+.flex { 
+  display: flex;
+}

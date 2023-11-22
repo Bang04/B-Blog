@@ -1,19 +1,22 @@
 import PostItem from "./PostItem"
-import classes from "./PostItem.module.css"
+import 'bulma/css/bulma.min.css';
+import classes from "./PostList.module.css";
 
 function PostList (props){
-    console.log(props);
-
+   
     return (
-        <div className={classes.postlist}>
-            {props.posts?.map((post) => (
+        <div class="columns is-flex-wrap-wrap">
+             {props.posts.map((post) => (
                 <PostItem 
                     key = {post.id}
                     id={post.id}
+                    image={post.image}
                     title = {post.title}
                     descrption = {post.descrption} 
+                    date={post.date}
                     keyword = {post.keyword}
                     />
+               
             ))}
        </div> 
     );

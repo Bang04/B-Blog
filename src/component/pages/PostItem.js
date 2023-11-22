@@ -1,6 +1,6 @@
 // import { useRouter } from 'react-router';
 import classes from './PostItem.module.css'
-import Card from '../ui/Card'
+
 function PostItem(props){
 
     // const router = useRouter();
@@ -8,15 +8,34 @@ function PostItem(props){
     // function showDetailsHandler() {
     //     router.push('/' +props.id);  
     //   }
-
     return (
-        <Card>
-            <div className={classes.humbnail}>{props.image}</div>  
-            <div className={classes.title}>{props.title}</div>
-            <div><p>{props.description}</p></div>
-            <div>{props.date}</div>
-            <div> <div>#{props.keyword}</div></div>
-        </Card>
+        <div class="column is-two-fifths">
+            <div class="card" >
+                <div class="card-image">
+                    <figure class="image is-5by2">
+                    <img src={props.image} alt={props.title} />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">{props.title}</p>
+                        <p class="subtitle is-6">@johnsmith</p>
+                    </div>
+                    </div>
+
+                    <div class="content">
+                        {props.description}
+                        <a>@ {props.keyword}</a>.
+                        <a href="#"># {props.keyword}</a> 
+                        <a href="#"># {props.keyword}</a>
+                    <br/>
+                    <time datetime={props.date}>{props.date}</time>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
     )
 }
 

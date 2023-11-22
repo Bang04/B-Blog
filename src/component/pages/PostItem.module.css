@@ -1,7 +1,6 @@
 .postlist{
   display: flex;
   flex-direction: column;
-    width: 320px;
     background-color: #1e1e1e;
     border: 1px solid #fff;
     color: beige;
