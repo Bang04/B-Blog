@@ -1,11 +1,10 @@
 // import divnk from 'next/divnk';
-import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import classes from './MainNavigation.module.css';
 import 'bulma/css/bulma.min.css';
 import $ from 'jquery';
 import serchImage from '../../images/search.png';
 import userthumImage from '../../images/social_profile.png';
-import menuImage from '../../images/menu.png';
 
 $(document).ready(function() {
     $(".navbar-burger").click(function() {
@@ -27,11 +26,11 @@ function MainNavigation() {
             </div> 
             <ul class="is-flex  is-flex-direction-row margin-right">
                 <li class="is-active">
-                    
-                    <figure class="image image is-32x32">
-                        <img src={serchImage} alt="serchImage"/>
-                    </figure>
-                    
+                    <button>
+                        <figure class="image image is-32x32">
+                            <img src={serchImage} alt="serchImage"/>
+                        </figure>
+                    </button>
                 </li>
                 <li>
                     <Link to="/myinfo">

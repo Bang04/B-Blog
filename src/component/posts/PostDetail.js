@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.min.css';
-function PostDetail(){
+function PostDetail(props){
     return (
         <div>
             <div class="card" >
