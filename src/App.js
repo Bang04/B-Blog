@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Layout from './component/layout/Layout'
-import PostList from './component/pages/PostList'
+import PostList from './component/posts/PostList'
 import thumImage from './images/jung.png'
 import thumImage2 from './images/jung2.png'
 const DUMMY_POSTS = [
@@ -74,10 +74,7 @@ const DUMMY_POSTS = [
 function App(props) {
   return (
     <Layout>
-      <div>
-        <PostList posts={DUMMY_POSTS} />
-      </div>
-    
+      <PostList posts={DUMMY_POSTS} />
     </Layout>  
   );
 }

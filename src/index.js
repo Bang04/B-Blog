@@ -6,6 +6,9 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Routes>
+      <Route path="/detail/:id" element={<Detail data={data} />}/>
+    </Routes>
     <App />
   </React.StrictMode>
 );

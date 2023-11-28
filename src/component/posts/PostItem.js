@@ -1,14 +1,9 @@
-// import { useRouter } from 'react-router';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import classes from './PostItem.module.css'
 
 function PostItem(props){
 
-    // const router = useRouter();
-
-    // function showDetailsHandler() {
-    //     router.push('/' +props.id);  
-    //   }
-    return (
+      return (
         <div class="column is-two-fifths">
             <div class="card" >
                 <div class="card-image">

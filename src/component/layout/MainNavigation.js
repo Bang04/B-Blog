@@ -1,4 +1,5 @@
 // import divnk from 'next/divnk';
+import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
 import classes from './MainNavigation.module.css';
 import 'bulma/css/bulma.min.css';
 import $ from 'jquery';
@@ -7,11 +8,7 @@ import userthumImage from '../../images/social_profile.png';
 import menuImage from '../../images/menu.png';
 
 $(document).ready(function() {
-
-    // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
-  
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
   
@@ -21,28 +18,27 @@ $(document).ready(function() {
 function MainNavigation() {
 
   return (
-
-   
-
     <header class="is-flex is-flex-direction-row container is-max-desktop">
         <nav class="navbar has-background-dark is-flex is-align-self-auto breadcrumb " aria-label="breadcrumbs">
-              <div class="navbar-brand">
-            <p className={classes.logotxt}>Blog</p>
-        </div>
+            <div class="navbar-brand">
+                <Link to="/">
+                    <p className={classes.logotxt}>Blog</p>
+                </Link>
+            </div> 
             <ul class="is-flex  is-flex-direction-row margin-right">
                 <li class="is-active">
-                    <a href="#"> 
-                        <figure class="image image is-32x32">
-                            <img src={serchImage} alt="serchImage"/>
-                        </figure>
-                    </a>
+                    
+                    <figure class="image image is-32x32">
+                        <img src={serchImage} alt="serchImage"/>
+                    </figure>
+                    
                 </li>
                 <li>
-                    <a href="#"> 
+                    <Link to="/myinfo">
                         <figure class="image image is-32x32">
                             <img src={userthumImage}  alt="userthumImage"/>
                         </figure>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                    <a role="button" class="navbar-burger has-text-white	" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -50,9 +46,6 @@ function MainNavigation() {
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
-
-                    <div class="navbar-menu" id="navMenu">
-                    </div>
                 </li>
                
             </ul>
