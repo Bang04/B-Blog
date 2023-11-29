@@ -75,14 +75,16 @@ const DUMMY_POSTS = [
     keyword : 'mysql'
   }, 
 ];
+
 const Router = () =>{
+ 
   return(
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/posts">
       <Navi />
       <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/posts" element ={<PostList posts={DUMMY_POSTS} />} />
-        <Route path="/posts/:id" element={<PostDetail />} />
+          {/* <Route path="/" element={<About />} /> */}
+          <Route index element ={<PostList posts={DUMMY_POSTS} />} />
+          <Route path="/posts/:id" element={<PostDetail />} />
       </Routes>
     </BrowserRouter>
   )

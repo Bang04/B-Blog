@@ -9,6 +9,31 @@
   
 }
 
-.flex { 
+.navibar { 
+  min-width: 145px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navibar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navibar ul li{
+}
+.navibar ul li a {
+  margin: 0;
+  padding: 0;
+}
+.navibar ul li .serchButton{
+  background-color: #353434; 
+  border: 0;
+}
+
+.navbar-burger{
+  width: 33px;
+  display: block !important;
 }

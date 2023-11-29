@@ -1,5 +1,10 @@
+import React from "react";
 import 'bulma/css/bulma.min.css';
+
+
 function PostDetail(props){
+    console.log(props.data);
+
     return (
         <div>
             <div class="card" >
@@ -29,4 +34,6 @@ function PostDetail(props){
         </div>
     )
 }
+
+
 export default PostDetail;

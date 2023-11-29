@@ -17,16 +17,16 @@ $(document).ready(function() {
 function MainNavigation() {
 
   return (
-    <header class="is-flex is-flex-direction-row container is-max-desktop">
-        <nav class="navbar has-background-dark is-flex is-align-self-auto breadcrumb " aria-label="breadcrumbs">
+    <header class="container">
+        <nav class={classes.navibar}>
             <div class="navbar-brand">
                 <Link to="/">
                     <p className={classes.logotxt}>Blog</p>
                 </Link>
             </div> 
-            <ul class="is-flex  is-flex-direction-row margin-right">
+            <ul>
                 <li class="is-active">
-                    <button>
+                    <button class={classes.serchButton}>
                         <figure class="image image is-32x32">
                             <img src={serchImage} alt="serchImage"/>
                         </figure>
